@@ -1,43 +1,36 @@
-# Личный проект «Sedona»
+# linthtml-config-htmlacademy
+> Это стандартный конфигурационный файл для linthtml от [HTML Academy](https://htmlacademy.ru/).
 
-* Студент: [<a href="https://htmlacademy.ru/profile/id181088">Роман Сухачев</a>]({{https://htmlacademy.ru/profile/id181088}}).
-* Наставник: `Неизвестно`.
+## Установка
 
----
+```bash
+npm install linthtml-config-htmlacademy -D
+```
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
+## Использование
 
----
+Если вы установили `linthtml-config-htmlacademy` локально в свой проект, то просто примените его в конфигурационном файле `.linthtml` вашего проекта:
 
-### Памятка
+```json
+{
+  "extends": "linthtml-config-htmlacademy"
+}
+```
 
-#### 1. Зарегистрируйтесь на Гитхабе
+### Расширение конфига
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+Просто добавьте ключ `"rules"` в ваш конфиг после `"extends": "linthtml-config-htmlacademy"`, а затем добавьте туда свои правила.
 
-#### 2. Создайте форк
+Например, если вы хотите изменить максимальную длину `line-max-len`, то нужно:
 
-[Откройте мастер-репозиторий]({{homepage}}) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии скопируется в ваш аккаунт.
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037949-67a635d6-7bae-11e7-9f2f-1a48fde231b9.jpg">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037953-6a8a7384-7bae-11e7-83ac-59603b1d696c.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Нажмите кнопку «Clone or download», а затем «Open in Desktop», чтобы клонировать репозиторий через программу [GitHub Desktop](https://desktop.github.com):
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037955-6c20c16c-7bae-11e7-9e1a-c52010042976.jpg">
-
-Программа клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Профессиональная вёрстка сайтов](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
+```json
+{
+  "extends": "linthtml-config-htmlacademy",
+  "rules": {
+    "line-max-len": [
+      true,
+      120
+    ]
+  }
+}
+```
