@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Sedona</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="navigation">
         <a href="#" class="logo">
-          <img src="" alt="Логотип города Sedona" class="main-logo">
+          <img src="images/header-logo.svg" alt="Логотип города Sedona" width="139" height="70" class="main-logo">
         </a>
 
         <ul class="navigation-list">
@@ -35,7 +36,7 @@
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="more-info" href="#">Хочу сюда!</a>
+            <a class="more-info button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +44,9 @@
 
     <main class="main-content">
       <h1 class="visually-hidden">Туристический город Седона</h1>
-
+      <div class="welcome">
+        <img class="welcome-img" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+      </div>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
 
@@ -51,14 +54,14 @@
           заслуживающий большего!</p>
         <p class="section-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 
-        <ol class="advatages-list">
-          <li class="advantages-item">
+        <ol class="advantages-list">
+          <li class="advantages-item light">
             <h3 class="advantages-title">Настоящий городок</h3>
             <p class="advantages-description">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </p>
-            <img class="advantages-img" src="" alt="Уютная улочка в городе Седона">
-            <ul>
+            <img class="advantages-img" src="images/street.jpg" alt="Уютная улочка в городе Седона">
+            <ul class="advantages-list-inner">
               <li class="advantages-subitem">
                 <h4 class="subitem-title">Жильё</h4>
                 <p class="subitem-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -73,10 +76,10 @@
               </li>
             </ul>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item light">
             <h3 class="advantages-title">Там есть мост дьявола</h3>
             <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img class="advantages-img" src="" alt="Фото моста дьявола: природного каменного моста">
+            <img class="advantages-img" src="images/canyon.jpg" alt="Фото моста дьявола: природного каменного моста">
           </li>
 
           <li class="advantages-item">
@@ -114,7 +117,7 @@
             <span class="visually-hidden">Ваш e-mail</span>
             <input type="e-mail" class="subscribe-input" name="email" placeholder="Ваш e-mail">
           </label>
-          <button class="subscribe-btn button" type="submit">Подписаться</button>
+          <button class="subscribe-btn" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -140,7 +143,7 @@
       </section>
       <section class="footer-link">
         <h2 class="visually-hidden">Ссылка для перехода на главную страницу HTML Academy</h2>
-        <a href="https://htmlacademy.ru/" class="footer-link"><img src="#" alt="Разработано HTML Academy" class="footer-logo"></a>
+        <a href="https://htmlacademy.ru/" class="footer-link"><img src="images/footer-logo.svg" alt="Разработано HTML Academy" class="footer-logo"></a>
       </section>
     </footer>
 
