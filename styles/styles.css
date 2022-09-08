@@ -54,7 +54,7 @@ body {
   line-height: 26px;
 }
 
-.navigation-item a{
+.navigation-link{
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
