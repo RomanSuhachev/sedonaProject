@@ -11,7 +11,7 @@
     <header class="main-heder">
       <nav class="navigation">
         <a href="index.html" class="page-header-link">
-          <img class="main-logo" src="images/header-logo.svg" alt="Логотип города Sedona">
+          <img class="main-logo" src="images/header-logo.svg" width="139" height="70" alt="Логотип города Sedona">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item"><a href="index.html" class="main-link">Главная</a></li>
@@ -26,7 +26,7 @@
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner main-container">
       <div class="hotels-wrapper">
         <h1 class="page-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -43,7 +43,7 @@
         <form action="https://echo.htmlacademy.ru/" class="hotel-choose" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul class="hotel-filter-list">
+            <ul class="hotel-filter-list no-grass">
               <li class="hotel-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
@@ -70,7 +70,7 @@
 
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип жилья:</legend>
-            <ul class="hotel-filter-list">
+            <ul class="hotel-filter-list no-grass">
               <li class="hotel-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="type" value="hotel" checked>
@@ -94,7 +94,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-price">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <div class="range">
               <label class="catalog-filter-label">
@@ -124,8 +124,9 @@
     </div>
       <section class="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="sort-type-title">Найдено гостиниц: 38</p>
-        <h3 class="visually-hidden">Сортировка и отображение</h3>
+        <div class="filter-wrapper">
+        <p class="sort-type-title result-title">Найдено гостиниц: 38</p>
+        <h3 class="visually-hidden hidden">Сортировка и отображение</h3>
         <details class="select-control">
           <summary class="select-control-active">Сначала дешёвые</summary>
           <ul class="select-menu">
@@ -143,7 +144,7 @@
             </li>
           </ul>
         </details>
-          <ul class="view">
+          <ul class="view no-grass">
             <li class="view-item view-item-active">
               <a class="view-link"><span class="visually-hidden">Карточками</span></a>
             </li>
@@ -154,10 +155,11 @@
               <a class="view-link"><span class="visually-hidden">Списком</span></a>
             </li>
           </ul>
+        </div>
           <h3 class="visually-hidden">Список гостиниц</h3>
 
           <article class="hotel-card">
-            <img src="images/catalog/amara resort.jpg" width="300" height="206" alt="Фотография отеля Amara Resort & Spa" class="hotel-card-img">
+            <img src="images/catalog/amara-resort.jpg" width="300" height="206" alt="Фотография отеля Amara Resort & Spa" class="hotel-card-img">
             <h4 class="card-title">Amara Resort & Spa</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -171,7 +173,7 @@
             <p class="card-rate">Рейтинг: 8,5</p>
           </article>
           <article class="hotel-card">
-            <img src="images/catalog/desert quail.jpg" width="300" height="206" alt="Фотография отеля Desert Quail Inn" class="hotel-card-img">
+            <img src="images/catalog/desert-quail.jpg" width="300" height="206" alt="Фотография отеля Desert Quail Inn" class="hotel-card-img">
             <h4 class="card-title">Desert Quail Inn</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -185,7 +187,7 @@
             <p class="card-rate">Рейтинг: 8,9</p>
           </article>
           <article class="hotel-card">
-            <img src="images/catalog/villas at poco diablo.jpg" width="300" height="206" alt="Фотография отеля Villas at Poco Diablo" class="hotel-card-img">
+            <img src="images/catalog/villas-diablo.jpg" width="300" height="206" alt="Фотография отеля Villas at Poco Diablo" class="hotel-card-img">
             <h4 class="card-title">Villas at Poco Diablo</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -216,6 +218,7 @@
       <div class="pagination">
         <h3 class="visually-hidden">Список страниц</h3>
         <button class="more-btn" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
+        <div class="pagination-wrapper">
         <ul class="pagination-list">
           <li class="pagination-item"><a href="#" class="pagination-link pagination-current">1</a></li>
           <li class="pagination-item"><a href="#" class="pagination-link">2</a></li>
@@ -237,6 +240,7 @@
           </details>
         </div>
       </div>
+      </div>
     </section>
     <section class="subscribe subscribe-none-bg">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -247,7 +251,7 @@
       </form>
     </section>
     </main>
-    <footer>
+    <footer class="page-footer">
       <section class="social-section">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
@@ -268,7 +272,7 @@
       </section>
       <section class="footer-link">
         <h2 class="visually-hidden">Разработано в HTML Academy</h2>
-        <a href="https://htmlacademy.ru/" class="footer-link"><img src="#" alt="Ссылка на сайт школы htmlacademy" class="footer-logo"></a>
+        <a href="https://htmlacademy.ru/" class="footer-link"><img src="images/footer-logo.svg" width="115" height="33" alt="Ссылка на сайт школы htmlacademy" class="footer-logo"></a>
       </section>
     </footer>
   </body>

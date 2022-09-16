@@ -14,12 +14,29 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: content-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  width: 1200px;
+  margin: 0px auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #ffffff;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .button {
@@ -39,16 +56,27 @@ body {
 
 .welcome {
   background-image: url("../images/welcome-background.png");
-  background-repeat: no-repeat;
-  text-align: center;
-  background-size: 100% auto;
+  background-color: #83B3D3;
+  min-height: 485px;
 }
 
 .main-header {
   background-color: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+}
+
 .navigation-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 435px;
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -57,11 +85,34 @@ body {
 .navigation-link{
   color: #000000;
   text-decoration: none;
+}
+
+.navigation-user {
+  display: flex;
+}
+
+.advantages {
+  text-align: center;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-description {
+  line-height: 21px;
 }
 
 .advantages-list .light {
   background-color: #83B3D3;
+  color: #ffffff;
+}
+
+.light .advantages-title {
   color: #ffffff;
 }
 
@@ -82,8 +133,20 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-subitem .subitem-title {
+  color:#000000;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .advantages-subitem:nth-child(even) {
   background-color: #ffffff;
+}
+
+.search-section {
+  text-align: center;
 }
 
 .section-title,
@@ -93,7 +156,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .section-description {
@@ -111,20 +173,12 @@ body {
 
 .subscribe {
   color: #ffffff;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
   background-image: url("../images/background-subscribe.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  background-color: #83b3d3;
+  text-align: center;
 }
 
-.subscribe-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
 
 .telephone {
   font-size: 40px;
@@ -158,6 +212,8 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 .btn-reset {
@@ -199,6 +255,11 @@ body {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
+  margin: 0px;
+}
+
+.catalog {
+  padding: 0 72px;
 }
 
 .catalog-filter-title {
@@ -269,9 +330,9 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  color: #000000;
-  text-transform: uppercase;
+  color: #ffffff;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .subscribe-input {
@@ -282,7 +343,7 @@ body {
 }
 
 .subscribe-description {
-  color: #333333;
+  color: #ffffff;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -290,6 +351,15 @@ body {
 
 .subscribe-none-bg {
   background-image: none;
+  background-color: #ffffff;
+}
+
+.subscribe-none-bg .subscribe-title {
+  color: #000000;
+}
+
+.subscribe-none-bg .subscribe-description {
+  color: #333333;
 }
 
 /* стилизация карточек */
@@ -312,4 +382,72 @@ body {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border-radius: 4px;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-grass {
+  padding: 0;
+  margin: 0;
+}
+
+.hotels-wrapper {
+  padding: 35px 72px 80px;
+}
+
+.hotel-choose {
+  display: flex;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-group.catalog-filter-price {
+  width: 287px;
+  margin-left: 95px;
+  margin-right: 80px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 81px;
+  width: 160px;
+}
+
+.catalog-filter-group {
+  width: 160px;
+  margin-right: 17px;
+}
+
+.result-title {
+  margin: 0;
+}
+
+.pagination-list {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;;
+}
+
+.pagination-select {
+  display: flex;
+}
+
+.hidden {
+  display: none;
 }
