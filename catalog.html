@@ -8,20 +8,31 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="main-heder">
+    <header class="main-header">
       <nav class="navigation">
         <a href="index.html" class="page-header-link">
           <img class="main-logo" src="images/header-logo.svg" width="139" height="70" alt="Логотип города Sedona">
         </a>
-        <ul class="navigation-list">
-          <li class="navigation-item"><a href="index.html" class="main-link">Главная</a></li>
-          <li class="navigation-item"><a href="#" class="about">О Седоне</a></li>
-          <li class="navigation-item"><a class="hotels">Гостиницы</a></li>
+        <ul class="navigation-list no-grass">
+          <li class="navigation-item"><a href="index.html" class="main-link navigation-link">Главная</a></li>
+          <li class="navigation-item"><a href="#" class="about navigation-link">О Седоне</a></li>
+          <li class="navigation-item"><a class="hotels navigation-link">Гостиницы</a></li>
         </ul>
-        <ul class="navigation-user">
-          <li class="navigation-user-item"><a href="" class="search"><span class="visually-hidden">Поиск</span></a></li>
-          <li class="navigation-user-item"><a href="" class="favorites"><span class="visually-hidden">Избранное</span></a></li>
-          <li class="navigation-user-item"><a href="#" class="more-info button">Хочу сюда!</a></li>
+        <ul class="navigation-user no-grass">
+          <li class="navigation-user-item">
+            <a href="" class="search">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-user-item">
+            <a href="" class="favorites">
+              <span class="visually-hidden">Избранное</span>
+              <span class="icon-counter">12</span>
+            </a>
+          </li>
+          <li class="navigation-user-item">
+            <a href="#" class="more-info button">Хочу сюда!</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -109,7 +120,7 @@
                     <span class="visually-hidden">Изменить минимальную цену</span>
                   </button>
                   <button class="range-toggle toggle-max" type="button">
-                    <span class="visually-hiden">Изменить максимальную цену</span>
+                    <span class="visually-hidden">Изменить максимальную цену</span>
                   </button>
                 </div>
               </div>
@@ -149,15 +160,15 @@
               <a class="view-link"><span class="visually-hidden">Карточками</span></a>
             </li>
             <li class="view-item">
-              <a class="view-link"><span class="visually-hidden">Слайдами</span></a>
+              <a class="view-link" href="#"><span class="visually-hidden">Слайдами</span></a>
             </li>
             <li class="view-item">
-              <a class="view-link"><span class="visually-hidden">Списком</span></a>
+              <a class="view-link" href="#"><span class="visually-hidden">Списком</span></a>
             </li>
           </ul>
         </div>
           <h3 class="visually-hidden">Список гостиниц</h3>
-
+          <div class="hotels-result">
           <article class="hotel-card">
             <img src="images/catalog/amara-resort.jpg" width="300" height="206" alt="Фотография отеля Amara Resort & Spa" class="hotel-card-img">
             <h4 class="card-title">Amara Resort & Spa</h4>
@@ -165,8 +176,10 @@
               <span class="card-description-title">Гостиница</span>
               <span class="card-description-price">от 4000 ₽</span>
             </p>
-            <a href="#" class="button">Подробнее</a>
-            <a href="#" class="button btn-secondary">В избранное</a>
+            <div class="card-button-wrapper">
+              <a href="#" class="button">Подробнее</a>
+              <a href="#" class="button btn-secondary">В избранное</a>
+            </div>
             <p class="star star-four">
               <span class="visually-hidden">4 звезды</span>
             </p>
@@ -179,8 +192,10 @@
               <span class="card-description-title">Гостиница</span>
               <span class="card-description-price">От 3000 ₽</span>
             </p>
-            <a href="#" class="button">Подробнее</a>
-            <a href="#" class="button btn-secondary">В избранное</a>
+            <div class="card-button-wrapper">
+              <a href="#" class="button">Подробнее</a>
+              <a href="#" class="button btn-secondary">В избранное</a>
+            </div>
             <p class="star star-three">
               <span class="visually-hidden">3 звезды</span>
             </p>
@@ -193,8 +208,10 @@
               <span class="card-description-title">Гостиница</span>
               <span class="card-description-price">от 2000 ₽</span>
             </p>
-            <a href="#" class="button">Подробнее</a>
-            <a href="#" class="button favorite">В избранном</a>
+            <div class="card-button-wrapper">
+              <a href="#" class="button">Подробнее</a>
+              <a href="#" class="button favorite">В избранном</a>
+              </div>
             <p class="star star-two">
               <span class="visually-hidden">2 звезды</span>
             </p>
@@ -207,20 +224,22 @@
               <span class="card-description-title">Гостиница</span>
               <span class="card-description-price">от 3000 ₽</span>
             </p>
-            <a href="#" class="button">Подробнее</a>
-            <a href="#" class="button btn-secondary">В избранное</a>
+            <div class="card-button-wrapper">
+              <a href="#" class="button">Подробнее</a>
+              <a href="#" class="button btn-secondary">В избранное</a>
+              </div>
             <p class="star star-two">
               <span class="visually-hidden">2 звезды</span>
             </p>
             <p class="card-rate">Рейтинг: 9,2</p>
           </article>
-
+        </div>
       <div class="pagination">
         <h3 class="visually-hidden">Список страниц</h3>
         <button class="more-btn" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
         <div class="pagination-wrapper">
-        <ul class="pagination-list">
-          <li class="pagination-item"><a href="#" class="pagination-link pagination-current">1</a></li>
+        <ul class="pagination-list no-grass">
+          <li class="pagination-item pagination-current"><a href="#" class="pagination-link">1</a></li>
           <li class="pagination-item"><a href="#" class="pagination-link">2</a></li>
           <li class="pagination-item"><a href="#" class="pagination-link">3</a></li>
           <li class="pagination-item"><a href="#" class="pagination-link">4</a></li>
@@ -228,7 +247,7 @@
           <li class="pagination-item"><a href="#" class="pagination-link">10</a></li>
         </ul>
         <div class="pagination-select">
-          <p>Гостиниц на странице:</p>
+          <p class="select-label">Гостиниц на странице:</p>
           <details class="select">
             <summary class="select-button">4</summary>
             <ul class="select-menu">
@@ -254,7 +273,7 @@
     <footer class="page-footer">
       <section class="social-section">
         <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social-list">
+        <ul class="social-list no-grass">
           <li class="social-item">
             <a href=" https://twitter.com/htmlacademy_ru" class="social twitter"><span class="visually-hidden">Twitter</span></a>
           </li>
