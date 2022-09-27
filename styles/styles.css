@@ -58,14 +58,14 @@ body {
   font-size: 20px;
 }
 
-.more-info {
-  margin-left: 20px;
-}
-
 .welcome {
   background-image: url("../images/welcome-background.png");
   background-color: #83B3D3;
   min-height: 485px;
+  display: flex;
+  padding-top: 51px;
+  padding-bottom: 80px;
+  justify-content: center;
 }
 
 .main-header {
@@ -73,21 +73,33 @@ body {
 }
 
 .navigation {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
   padding: 0 72px;
+  min-height: 65px;
+  gap: 30px;
+}
+
+.logo {
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 1;
 }
 
 .navigation-list {
   display: flex;
   flex-grow: 1;
-  align-items: center;
-  width: 435px;
-  margin: 0 30px;
   padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   flex-wrap: wrap;
+  margin: 0;
+}
+
+.navigation-item {
+  display: flex;
+  align-items: center;
 }
 
 .navigation-link{
@@ -100,6 +112,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0px;
+  max-width: 322px;
+  justify-content: flex-end;
 }
 
 .navigation-user-item .search,
@@ -107,6 +122,10 @@ body {
   height: 42px;
   width: 42px;
   display: block;
+}
+
+.navigation-user-item-btn {
+  margin-left: 20px;
 }
 
 .advantages {
@@ -119,28 +138,67 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
+  grid-area: title;
+}
+
+.description-block {
+  padding: 60px;
 }
 
 .advantages-description {
   line-height: 21px;
 }
 
+
 .advantages-list .light {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  grid-column: 1/-1;
   background-color: #83B3D3;
   color: #ffffff;
+  padding: 0;
 }
 
 .light .advantages-title {
   color: #ffffff;
 }
 
+.advantages-img {
+  grid-column: span 2;
+  width: 100%;
+  height: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.advantages-item.light:nth-child(2) .advantages-img {
+  order: -1;
+}
+
 .advantages-list-inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax( 400px, 1fr));
+  grid-column: 1/-1;
   background-color: #ffffff;
   color: #333333;
 }
 
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
 .advantages-item {
   background-color:rgba(131, 179, 211, 0.12);
+  padding: 60px;
 }
 
 .advantages-item:nth-child(even):not(.advantages-list .light) {
@@ -149,6 +207,7 @@ body {
 
 .advantages-subitem {
   background-color: rgba(131, 179, 211, 0.12);
+  padding: 60px;
 }
 
 .advantages-subitem .subitem-title {
@@ -297,7 +356,7 @@ body {
 .hotels-result {
   display: grid;
   grid-template-columns: repeat(3, minmax(340px, 1fr));
-  gap: 20px;
+  gap: 10px 18px;
 }
 
 .catalog-filter-title {
@@ -320,7 +379,6 @@ body {
   font-style: normal;
   font-weight: 700;
   color: #000000;
-  width: 50%;
 }
 
 /* Стилизация варианта выбора отелей */
@@ -426,9 +484,14 @@ body {
 }
 
 .page-footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
   padding: 0 72px;
+  gap: 30px;
+}
+
+.footer-link {
+  justify-self: end;
 }
 
 .social-list .social {
@@ -465,8 +528,18 @@ body {
 }
 
 .hotel-choose {
-  display: flex;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 200px 1fr 223px;
+  justify-content: space-between;
+  gap: 17px;
 }
+
+.catalog-filter-price .range{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 
 .hotel-card {
   padding: 20px;
@@ -489,9 +562,29 @@ body {
 }
 
 .filter-wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 290px max-content;
+  gap: 80px;
   padding: 44px 0;
+}
+
+.view {
+  display: flex;
+  max-width: 223px;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.view-item {
+  margin: 4px;
+}
+
+.view-link {
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
 .catalog-filter-group.catalog-filter-price {
@@ -499,10 +592,25 @@ body {
   margin-left: 95px;
 }
 
+.catalog-filter-label {
+  display: grid;
+  grid-template-columns: 1fr 44px;
+}
+
+.range-title {
+ grid-column: -1 / -2;
+ grid-row: 1/2;
+}
+
+.catalog-filter-input {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  margin-left: 81px;
+  justify-self: end;
   width: 160px;
 }
 
