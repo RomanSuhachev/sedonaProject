@@ -61,6 +61,23 @@ body {
   min-width: 160px;
 }
 
+.more-info:hover,
+.search-button:hover {
+  background-color: #615048;
+}
+
+.more-info:focus,
+.search-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.more-info:active,
+.search-button:active {
+  border: none;
+  background-color: #615048;
+  color: rgba(255,255,255,.3)
+}
+
 .search-button {
   font-size: 20px;
   width: 575px;
@@ -121,6 +138,15 @@ body {
   padding: 17px;
 }
 
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:active {
+  color: #756257;
+  opacity: 0.3
+}
+
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
@@ -138,6 +164,21 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.search svg,
+.favorites svg {
+  fill: #000000;
+}
+
+.search:hover svg,
+.favorites:hover svg {
+  fill: #756257;
+}
+
+.search:active svg,
+.favorites:active svg {
+  opacity: 0.3; 
 }
 
 .icon-counter {
@@ -405,6 +446,18 @@ img {
   padding: 10px 22px;
 }
 
+.subscribe-btn:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-btn:focus {
+  outline: 3px solid #756257;
+}
+
+.subscribe-btn:active {
+  color: rgba(255,255,255,.3);
+}
+
 /* catalog-buttons */
 
 .btn-secondary {
@@ -573,6 +626,18 @@ img {
   padding: 17px;
   outline: none;
   border: none;
+}
+
+.subscribe-input:hover {
+  background-color: #e6e6e6;
+}
+
+.subscribe-input:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.subscribe-input:invalid {
+  outline: 2px solid #FF5757;
 }
 
 .subscribe-description {
