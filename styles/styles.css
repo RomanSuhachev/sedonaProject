@@ -178,7 +178,7 @@ body {
 
 .search:active svg,
 .favorites:active svg {
-  opacity: 0.3; 
+  opacity: 0.3;
 }
 
 .icon-counter {
@@ -210,7 +210,6 @@ body {
   position: absolute;
   height: 2px;
   bottom: 0;
-  width: 68px;
   background-color:#756257;
   right: 17px;
   left: 17px;
@@ -430,6 +429,18 @@ img {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.telephone:hover {
+  color: #756257;
+}
+
+.telephone:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.telephone:active {
+  opacity: .3;
 }
 
 .subscribe-btn {
@@ -714,8 +725,24 @@ img {
   align-items: center;
 }
 
-.footer-link {
+.link-section {
   justify-self: end;
+}
+
+.footer-link svg{
+  fill: #000000;
+}
+
+.footer-link:hover svg{
+  fill: #756257;
+}
+
+.footer-link:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.footer-link:active {
+  opacity: .3;
 }
 
 .social-list .social {
@@ -734,6 +761,22 @@ img {
 .social-item {
   display: flex;
   align-items: center;
+}
+
+.social svg {
+  fill:#83B3D3;
+}
+
+.social:hover svg {
+  fill: #68A2CA;
+}
+
+.social:focus {
+  outline: 3px solid #83B3D3
+}
+
+.social:active {
+  opacity: .3;
 }
 
 .social-list {
