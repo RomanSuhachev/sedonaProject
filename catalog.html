@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог отелей</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -49,7 +50,12 @@
         <h1 class="page-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная страница</span></a>
+            <a class="breadcrumbs-link" href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ffffff"><path d="M6 0L0 5.8V12h12V5.8L6 0zm5 11H1V6.2l5-4.8 5 4.8V11z" fill="#ffffff"/>
+                <path d="M4 10h1V7.5h2V10h1V6.5H4V10z"/>
+              </svg>
+              <span class="visually-hidden">Главная страница</span>
+            </a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
@@ -146,7 +152,7 @@
         <p class="sort-type-title result-title">Найдено гостиниц: 38</p>
         <h3 class="visually-hidden hidden">Сортировка и отображение</h3>
         <details class="select-control">
-          <summary class="select-control-active">Сначала дешёвые</summary>
+          <summary class="select-button">Сначала дешёвые</summary>
           <ul class="select-menu">
             <li class="select-item">
               <a href="#" class="select-option">Сначала дешёвые</a>
@@ -164,20 +170,50 @@
         </details>
           <ul class="view no-grass">
             <li class="view-item view-item-active">
-              <a class="view-link"><span class="visually-hidden">Карточками</span></a>
+              <a class="view-link active-view">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                  <path d="M4 0H0V6H4V0Z" fill="black"/>
+                  <path d="M16 0H12V6H16V0Z" fill="black"/>
+                  <path d="M10 0H6V6H10V0Z" fill="black"/>
+                  <path d="M4 8H0V14H4V8Z" fill="black"/>
+                  <path d="M16 8H12V14H16V8Z" fill="black"/>
+                  <path d="M10 8H6V14H10V8Z" fill="black"/>
+                  </svg>
+                <span class="visually-hidden">Карточками</span>
+              </a>
             </li>
             <li class="view-item">
-              <a class="view-link" href="#"><span class="visually-hidden">Слайдами</span></a>
+              <a class="view-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                  <path d="M16 12H0V14H16V12Z" fill="black"/>
+                  <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                  </svg>
+                <span class="visually-hidden">Слайдами</span>
+              </a>
             </li>
             <li class="view-item">
-              <a class="view-link" href="#"><span class="visually-hidden">Списком</span></a>
+              <a class="view-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                  <path d="M2 0H0V2H2V0Z" fill="black"/>
+                  <path d="M16 0H4V2H16V0Z" fill="black"/>
+                  <path d="M2 4H0V6H2V4Z" fill="black"/>
+                  <path d="M16 4H4V6H16V4Z" fill="black"/>
+                  <path d="M2 8H0V10H2V8Z" fill="black"/>
+                  <path d="M16 8H4V10H16V8Z" fill="black"/>
+                  <path d="M2 12H0V14H2V12Z" fill="black"/>
+                  <path d="M16 12H4V14H16V12Z" fill="black"/>
+                  </svg>
+                <span class="visually-hidden">Списком</span>
+              </a>
             </li>
           </ul>
         </div>
           <h3 class="visually-hidden">Список гостиниц</h3>
           <div class="hotels-result">
           <article class="hotel-card">
-            <img src="images/catalog/amara-resort.jpg" width="300" height="206" alt="Фотография отеля Amara Resort & Spa" class="hotel-card-img">
+            <a class="hotel-card-link">
+              <img src="images/catalog/amara-resort.jpg" width="300" height="206" alt="Фотография отеля Amara Resort & Spa" class="hotel-card-img">
+            </a>
             <h4 class="card-title">Amara Resort & Spa</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -193,7 +229,9 @@
             <p class="card-rate">Рейтинг: 8,5</p>
           </article>
           <article class="hotel-card">
-            <img src="images/catalog/desert-quail.jpg" width="300" height="206" alt="Фотография отеля Desert Quail Inn" class="hotel-card-img">
+            <a class="hotel-card-link">
+              <img src="images/catalog/desert-quail.jpg" width="300" height="206" alt="Фотография отеля Desert Quail Inn" class="hotel-card-img">
+            </a>
             <h4 class="card-title">Desert Quail Inn</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -209,7 +247,9 @@
             <p class="card-rate">Рейтинг: 8,9</p>
           </article>
           <article class="hotel-card">
-            <img src="images/catalog/villas-diablo.jpg" width="300" height="206" alt="Фотография отеля Villas at Poco Diablo" class="hotel-card-img">
+            <a class="hotel-card-link">
+              <img src="images/catalog/villas-diablo.jpg" width="300" height="206" alt="Фотография отеля Villas at Poco Diablo" class="hotel-card-img">
+            </a>
             <h4 class="card-title">Villas at Poco Diablo</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -225,7 +265,9 @@
             <p class="card-rate">Рейтинг: 9,2</p>
           </article>
           <article class="hotel-card">
-            <img src="images/catalog/green-tree.jpg" width="300" height="206" alt="Фотография отеля GreenTree Inn" class="hotel-card-img">
+            <a class="hotel-card-link">
+              <img src="images/catalog/green-tree.jpg" width="300" height="206" alt="Фотография отеля GreenTree Inn" class="hotel-card-img">
+            </a>
             <h4 class="card-title">GreenTree Inn</h4>
             <p class="card-description">
               <span class="card-description-title">Гостиница</span>
@@ -243,7 +285,9 @@
         </div>
       <div class="pagination">
         <h3 class="visually-hidden">Список страниц</h3>
-        <button class="more-btn" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
+        <div class="button-wrapper">
+          <button class="more-btn" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
+        </div>
         <div class="pagination-wrapper">
         <ul class="pagination-list no-grass">
           <li class="pagination-item pagination-current"><a href="#" class="pagination-link">1</a></li>
