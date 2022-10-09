@@ -62,7 +62,8 @@ body {
 }
 
 .more-info:hover,
-.search-button:hover {
+.search-button:hover,
+.btn-more:hover {
   background-color: #615048;
 }
 
@@ -71,13 +72,15 @@ body {
 .subscribe-inut:focus,
 .social:focus,
 .telephone:focus,
-.footer-link:focus {
+.footer-link:focus,
+.btn-more:focus {
   outline: 3px solid #83b3d3;
 }
 
 .more-info:active,
-.search-button:active {
-  border: none;
+.search-button:active,
+.btn-more:active {
+  outline: none;
   background-color: #615048;
   color: rgba(255,255,255,.3)
 }
@@ -465,15 +468,20 @@ img {
 .subscribe-btn:hover,
 .form-submit:hover,
 .btn-favorite:hover:not(.favorite),
-.pagination-link:hover {
+.pagination-item:hover:not(.pagination-current) a,
+.btn-favorite:hover {
   background-color: #68A2CA;
 }
 
-.subscribe-btn:focus {
+.subscribe-btn:focus,
+.pagination-link:focus,
+.btn-favorite:focus {
   outline: 3px solid #756257;
 }
 
-.subscribe-btn:active {
+.subscribe-btn:active,
+.pagination-item:active:not(.pagination-current) a,
+.btn-favorite:active {
   color: rgba(255,255,255,.3);
 }
 
