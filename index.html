@@ -186,5 +186,48 @@
       </section>
     </footer>
 
+    <section class="modal-background">
+      <div class="modal-container">
+        <h2 class="modal-title">поиск гостиницы в седоне</h2>
+        <button class="modal-btn-close">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form action="https://echo.htmlacademy.ru/" class="modal-form">
+          <div class="search-form-date">
+            <label for="date-in" class="date-title field-title">Дата заезда:</label>
+            <input type="text" class="date-in" placeholder="Укажите дату заезда" value="27 апреля 2020" id="date-in">
+            <span class="message error-message">Мы не можем отправить вас в прошлое</span>
+          </div>
+          <div class="search-form-date">
+            <label for="date-out" class="date-title field-title">Дата выезда:</label>
+            <input type="text" class="date-out" placeholder="Укажите дату заезда" value="1 сентября 2021" id="date-out">
+            <span class="message">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+          <div class="amount-wrapper">
+            <label for="adults-amount" class="field-title">Взрослые:</label>
+            <div class="amount-btn-wrapper">
+              <button type="button" class="btn btn-minus"></button>
+              <input type="number" class="input-adults field-input" value="2" name="adults-amount" min="1" step="1" id="adults-amount">
+              <button type="button" class="btn btn-plus"></button>
+            </div>
+          </div>
+          <div class="amount-wrapper">
+            <span class="field-title-span">
+              <label for="children-amount" class="field-title children-title">Дети:</label>
+              <span class="field-info">
+                <span class="info-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </span>
+            <div class="amount-btn-wrapper">
+              <button type="button" class="btn btn-minus"></button>
+              <input type="number" class="children-adults field-input" value="1" name="children-amount" min="1" step="1" id="children-amount">
+              <button type="button" class="btn btn-plus"></button>
+            </div>
+          </div>
+          <button type="submit" class="modal-btn-submit">Найти</button>
+        </form>
+      </div>
+    </section>
+
   </body>
 </html>
